@@ -12,7 +12,6 @@ void insertBeg(struct Node** head, int x) {
     n->next = *head;
     *head = n;
 }
-
 void insertEnd(struct Node** head, int x) {
     struct Node* n = malloc(sizeof(struct Node));
     n->data = x;
@@ -25,7 +24,6 @@ void insertEnd(struct Node** head, int x) {
     while (t->next) t = t->next;
     t->next = n;
 }
-
 void insertPos(struct Node** head, int x, int pos) {
     struct Node* n = malloc(sizeof(struct Node));
     n->data = x;
@@ -44,7 +42,6 @@ void insertPos(struct Node** head, int x, int pos) {
     n->next = t->next;
     t->next = n;
 }
-
 void delBeg(struct Node** head) {
     if (!*head) return;
     struct Node* t = *head;
@@ -112,7 +109,6 @@ int main() {
         printf("8. Exit\n");
         printf("Enter choice: ");
         scanf("%d", &ch);
-
         switch (ch) {
             case 1: 
                 printf("Enter value: ");
@@ -150,7 +146,5 @@ int main() {
                 return 0;
             default:
                 printf("Invalid choice\n");
-        }
-    }
-}
-
+        }}}
+        

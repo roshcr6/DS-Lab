@@ -4,8 +4,6 @@
 
 int deque[SIZE];
 int front = -1, rear = -1;
-
-
 void insertRear(int value) {
     if ((front == 0 && rear == SIZE - 1) || (front == rear + 1)) {
         printf("Deque Overflow!\n");
@@ -19,8 +17,6 @@ void insertRear(int value) {
         printf("%d inserted at rear.\n", value);
     }
 }
-
-// Insert at front
 void insertFront(int value) {
     if ((front == 0 && rear == SIZE - 1) || (front == rear + 1)) {
         printf("Deque Overflow!\n");
@@ -34,7 +30,6 @@ void insertFront(int value) {
         printf("%d inserted at front.\n", value);
     }
 }
-
 void deleteFront() {
     if (front == -1) {
         printf("Deque Underflow!\n");
@@ -44,11 +39,7 @@ void deleteFront() {
             front = rear = -1;
         } else {
             front = (front + 1) % SIZE;
-        }
-    }
-}
-
-
+        }}}
 void deleteRear() {
     if (front == -1) {
         printf("Deque Underflow!\n");
@@ -58,9 +49,7 @@ void deleteRear() {
             front = rear = -1;
         } else {
             rear = (rear - 1 + SIZE) % SIZE;
-        }
-    }
-}
+        }}}
 
 void display() {
     if (front == -1) {
@@ -131,5 +120,3 @@ int main() {
     }
     return 0;
 }
-
-
